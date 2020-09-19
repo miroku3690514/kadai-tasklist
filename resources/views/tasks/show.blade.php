@@ -12,7 +12,7 @@
             <td>{{ $task->content }}</td>
         </tr>
     </table>
-    {!! link_to_route('task.edit', 'このタスクを編集', ['task' => $task->id], ['class' => 'btn btn-primary']) !!}
+    {!! link_to_route('tasks.edit', 'このタスクを編集', ['task' => $task->id], ['class' => 'btn btn-primary']) !!}
     
     {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
         {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
